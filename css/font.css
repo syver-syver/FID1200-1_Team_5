@@ -1,1 +1,13 @@
-/* ikke noe her enda*/
+html {font-size: 100%;} /*16px*/
+
+header {
+    font-size: 1.953rem;
+}
+
+h1 {
+    font-size: 3.052rem;   
+}
+
+h2 {
+    font-size: 2.441rem;
+}
