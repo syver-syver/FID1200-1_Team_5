@@ -1,6 +1,5 @@
 function init() {
 
-
     const section_element = document.querySelector('.shopping_list_items');
     const input_field = document.querySelector('input');
     const submit_button = document.querySelector('button');
@@ -13,7 +12,6 @@ function init() {
 
     function add_list_item() {
         const li_element = document.createElement('li');
-
 
         let li_checkbox = document.createElement('input')
         li_checkbox.type = 'checkbox';
