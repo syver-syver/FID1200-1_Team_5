@@ -1,57 +1,37 @@
-header {
-    background-color: rgb(132, 200, 255);
-    height: 80px;
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+:root {
+    --100: #000;
+    --200: #2F4550;
+    --300: #586F7C;
+    --400: #B8DBD9;
+    --500: #F4F4F9;
 }
 
-header a {
-    text-decoration: none;
+html {
+    font-size: 125%; /*20px*/
 }
 
-.header {
-    height: 100%;
+body{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center;
+    background-color: var(--500)
 }
 
-.header input[type="text"] {
-    background-color: rgb(132, 200, 255);
-    text-align: center;
-    font-size: 1.953rem;
+.list_buttons {
+    display: flex;
+    padding: 0 1.05rem 0 1.05rem;
+    border: var(--200) solid 4px;
+    border-radius: 5rem;
+}
+
+.list_buttons input {
+    font-size: 1.5rem;
+    background-color: transparent;
+}
+
+.list_buttons button {
+    background-color: transparent;
 }
 
 main {
     width: 600px;
-    margin: auto;
-}
-
-form {
-    color: darkblue;
-}
-
-input[type="text"] {
-    background-color: bisque;
-}
-
-.list {
-    font-size: 22px;
-    width: 100%;
-    border: 1px solid;
-}
-
-.list li {
-    list-style: none;
-    background-color: rgb(242, 188, 122);
-    border-bottom: 1px solid;
-    text-indent: 15px;
-    padding: 10px;
-}
-
-li a {
-    float: right;
-    text-decoration: none;
-    color: red;
 }
