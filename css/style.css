@@ -1,29 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 :root {
-    --100: #000;
-    --200: #2F4550;
-    --300: #586F7C;
-    --400: #B8DBD9;
-    --500: #F4F4F9;
+    --100: rgb(0, 0, 0);
+    --200: rgb(47, 69, 80);
+    --200_checked: rgb(89, 106, 115);
+    --300: rgb(88, 111, 124);
+    --400: rgb(184, 219, 217);
+    --500: rgb(244, 244, 249);
 }
 
 html {
     font-size: 125%; /*20px*/
+    font-family: 'Roboto', sans-serif;
 }
 
 body{
+    background-color: var(--500);
+    min-height: 100vh;
+}
+
+header {
     display: flex;
-    justify-content: center;
-    background-color: var(--500)
+    justify-content: space-between;
+    max-width: 100vw;
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2.4rem;
 }
 
 .list_buttons {
     display: flex;
     border: var(--200) solid 0.2rem;
     border-radius: 5rem;
+    max-width: 24rem;
 }
 
 .list_buttons input {
-    font-size: 1.5rem;
+    font-size: 1.95rem;
+    font-weight: 400;
     background-color: transparent;
     width: 100%;
     border-radius: 0 5rem 5rem 0;
@@ -35,7 +51,62 @@ body{
     border-radius: 5rem 0 0 5rem;
 }
 
+li {
+    display: flex;
+    list-style: none;
+    font-weight: 400;
+    font-size: 1.95rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.li_delete_button {
+    margin-left: auto;
+    background-image: url(../assets/x_icon.svg);
+    width: 2.4rem;
+    height: 2.4rem;
+}
 main {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
     max-width: 100vw;
-    width: 30rem;
+}
+
+button {
+    background-color: transparent;
+}
+
+span {
+    color: var(--200);
+}
+
+::placeholder {
+    color: var(--200_checked);
+}
+
+/* checkbox styling inspirasjon https://moderncss.dev/pure-css-custom-checkbox-style/ */
+[type="checkbox"]:checked{
+    appearance: none;
+    background-image: url("../assets/Checkmark_icon.svg");
+    font: inherit;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.5rem;
+    margin-right: 1.45rem;
+}
+
+[type="checkbox"]:checked + span {
+    text-decoration: line-through var(--200_checked);
+    color: var(--200_checked);
+}
+
+[type="checkbox"]:not(:checked) {
+    appearance: none;
+    font: inherit;
+    width: 2.4rem;
+    height: 2.4rem;
+    border: 0.2rem solid var(--200);
+    border-radius: 0.5rem;
+    margin-right: 1.45rem;
 }
