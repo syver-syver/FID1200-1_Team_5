@@ -5,16 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script async src="js/app.js"></script>
+    <script async src="js/new_app.js"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <header>
+        <button>←</button>
+        <h1>Handleliste</h1>
+        <button>⌂</button>
+    </header>
     <main>
         <div class="list_buttons">
-            <button style="height: 48px;"><img src="assets\input_add_button.svg" alt=""></button>
+            <button id="submit_button"><img style="height: 30px;" src="assets\pluss_icon.svg" alt=""></button>
             <input type="text" placeholder="Legg til...">
+            <i class="fa-brands fa-github-square"></i>
         </div>
         <button id="remove">remove items</button>
         <section class="shopping_list_items"></section>
