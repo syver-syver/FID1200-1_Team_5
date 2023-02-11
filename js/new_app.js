@@ -8,7 +8,7 @@ function init() {
     // Local storage https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
     const shopping_list_from_storage = JSON.parse(localStorage.getItem('shopping_list')) || [];
 
-    function add_or_render_list_item(item) {
+    function render_list_item(item) {
         const li_element = document.createElement('li');
         const li_checkbox = document.createElement('input');
         li_checkbox.type = 'checkbox';
@@ -45,14 +45,14 @@ function init() {
         });
     }
 
-    shopping_list_from_storage.forEach(item => add_or_render_list_item(item));
+    shopping_list_from_storage.forEach(item => render_list_item(item));
     section_element.appendChild(ul_element);
 
     submit_button.addEventListener('click', () => {
         const item = { value: input_field.value, checked: false };
         shopping_list_from_storage.push(item);
         localStorage.setItem('shopping_list', JSON.stringify(shopping_list_from_storage));
-        add_or_render_list_item(item);
+        render_list_item(item);
         input_field.value = '';
     });
     remove_button.addEventListener('click', remove_all_list_items);
@@ -61,7 +61,7 @@ function init() {
             const item = { value: input_field.value, checked: false };
             shopping_list_from_storage.push(item);
             localStorage.setItem('shopping_list', JSON.stringify(shopping_list_from_storage));
-            add_or_render_list_item(item);
+            render_list_item(item);
             input_field.value = '';
         }
     });
