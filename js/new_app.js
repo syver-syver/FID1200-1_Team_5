@@ -49,21 +49,31 @@ function init() {
     section_element.appendChild(ul_element);
 
     submit_button.addEventListener('click', () => {
-        const item = { value: input_field.value, checked: false };
-        shopping_list_from_storage.push(item);
-        localStorage.setItem('shopping_list', JSON.stringify(shopping_list_from_storage));
-        render_list_item(item);
-        input_field.value = '';
-    });
-    remove_button.addEventListener('click', remove_all_list_items);
-    input_field.addEventListener('keyup', (event) => {
-        if (event.key === 'Enter') {
+        if (input_field.value == '') {
+            alert('Skriv noe i feltet først')
+        }
+        else {
             const item = { value: input_field.value, checked: false };
             shopping_list_from_storage.push(item);
             localStorage.setItem('shopping_list', JSON.stringify(shopping_list_from_storage));
             render_list_item(item);
             input_field.value = '';
-        }
+        };
+    });
+    remove_button.addEventListener('click', remove_all_list_items);
+    input_field.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            if (input_field.value == '') {
+                alert('Skriv noe i feltet først')
+            }
+            else {
+                const item = { value: input_field.value, checked: false };
+                shopping_list_from_storage.push(item);
+                localStorage.setItem('shopping_list', JSON.stringify(shopping_list_from_storage));
+                render_list_item(item);
+                input_field.value = '';
+            };
+        };
     });
 
     function remove_all_list_items() {
