@@ -5,7 +5,7 @@ function init() {
     const remove_button = document.getElementById('remove');
     const ul_element = document.createElement('ul');
 
-    // Local storage https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+    // Local storage explanation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
     const shopping_list_from_storage = JSON.parse(localStorage.getItem('shopping_list')) || [];
 
     function render_list_item(item) {
