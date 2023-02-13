@@ -10,11 +10,12 @@
 }
 
 html {
-    font-size: 125%; /*20px*/
+    font-size: 125%;
+    /*20px*/
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+body {
     background-color: var(--500);
     min-height: 100vh;
 }
@@ -30,6 +31,13 @@ header {
 
 h1 {
     font-size: 2.4rem;
+    color: var(--200);
+}
+
+#remove {
+    background-image: url(../assets/Søppel_icon.svg);
+    height: 2.4rem;
+    width: 2.4rem;
 }
 
 .list_buttons {
@@ -54,8 +62,8 @@ h1 {
 }
 
 li:nth-child(1n+1):nth-last-child(-n+1),
-  li:nth-child(1n+1):nth-last-child(-n+1) ~ li {
-    border:none;
+li:nth-child(1n+1):nth-last-child(-n+1)~li {
+    border: none;
 }
 
 li {
@@ -73,6 +81,7 @@ li {
     width: 2.4rem;
     height: 2.4rem;
 }
+
 main {
     display: flex;
     align-content: center;
@@ -94,7 +103,7 @@ span {
 }
 
 /* checkbox styling inspirasjon https://moderncss.dev/pure-css-custom-checkbox-style/ */
-[type="checkbox"]:checked{
+[type="checkbox"]:checked {
     appearance: none;
     background-image: url("../assets/Checkmark_icon.svg");
     font: inherit;
@@ -104,7 +113,7 @@ span {
     margin-right: 1.45rem;
 }
 
-[type="checkbox"]:checked + span {
+[type="checkbox"]:checked+span {
     text-decoration: line-through var(--200_checked);
     color: var(--200_checked);
 }
@@ -117,4 +126,11 @@ span {
     border: 0.2rem solid var(--200);
     border-radius: 0.5rem;
     margin-right: 1.45rem;
+}
+
+@media screen and (max-width: 400px) {
+    header {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
 }

@@ -76,6 +76,14 @@ function init() {
         };
     });
 
+    remove_button.addEventListener('mouseover', () => {
+        remove_button.style.backgroundImage = "url('/assets/Søppel_icon_hover.svg')";
+    });
+
+    remove_button.addEventListener('mouseout', () => {
+        remove_button.style.backgroundImage = "url('/assets/Søppel_icon.svg')";
+    });
+
     function remove_all_list_items() {
         while (ul_element.firstChild) {
             ul_element.removeChild(ul_element.firstChild);
