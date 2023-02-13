@@ -76,13 +76,21 @@ function init() {
         };
     });
 
-    remove_button.addEventListener('mouseover', () => {
-        remove_button.style.backgroundImage = "url('/assets/Søppel_icon_hover.svg')";
-    });
 
-    remove_button.addEventListener('mouseout', () => {
-        remove_button.style.backgroundImage = "url('/assets/Søppel_icon.svg')";
-    });
+    function remove_button_hover() {
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            remove_button.addEventListener('mouseover', () => {
+                remove_button.style.backgroundImage = "url('/assets/Søppel_icon_hover.svg')";
+            });
+
+            remove_button.addEventListener('mouseout', () => {
+                remove_button.style.backgroundImage = "url('/assets/Søppel_icon.svg')";
+            });
+        }
+        else {
+
+        };
+    };
 
     function remove_all_list_items() {
         while (ul_element.firstChild) {
