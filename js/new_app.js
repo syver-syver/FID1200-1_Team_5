@@ -92,6 +92,8 @@ function init() {
         };
     };
 
+    remove_button_hover();
+
     function remove_all_list_items() {
         while (ul_element.firstChild) {
             ul_element.removeChild(ul_element.firstChild);
