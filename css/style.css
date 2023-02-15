@@ -149,7 +149,6 @@ span::-webkit-scrollbar {
 
 @media screen and (max-width: 600px) {
     header {
-        flex-direction: column;
         padding: 0.5rem;
     }
 
@@ -171,6 +170,11 @@ span::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 400px) {
+    header {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
     section {
         width: 100%;
     }
