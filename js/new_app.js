@@ -76,7 +76,7 @@ function init() {
         };
     });
 
-
+    // Lenke til hvordan jeg kan ha javascript på bare pc https://stackoverflow.com/a/42044841
     function remove_button_hover() {
         if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             remove_button.addEventListener('mouseover', () => {
