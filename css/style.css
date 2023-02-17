@@ -148,6 +148,14 @@ span::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 600px) {
+    html {
+        background-color: var(--400);
+    }
+    
+    body {
+        background-color: var(--500);
+    }
+
     header {
         padding: 0.5rem;
     }
@@ -170,14 +178,6 @@ span::-webkit-scrollbar {
 }
 
 @media screen and (max-width: 400px) {
-    html {
-        background-color: var(--400);
-    }
-    
-    body {
-        background-color: var(--500);
-    }
-
     header {
         flex-direction: column;
         padding: 0.5rem;
