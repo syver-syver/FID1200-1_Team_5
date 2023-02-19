@@ -34,6 +34,7 @@ h1 {
 }
 
 #remove {
+
     height: 2.4rem;
     width: 2.4rem;
 }
@@ -100,6 +101,7 @@ main {
 
 button {
     background-color: transparent;
+    cursor: pointer;
 }
 
 span {
@@ -117,6 +119,7 @@ span::-webkit-scrollbar {
 
 /* checkbox styling inspirasjon https://moderncss.dev/pure-css-custom-checkbox-style/ */
 [type="checkbox"]:checked {
+    cursor: pointer;
     appearance: none;
     background-image: url("../assets/Checkmark_icon.svg");
     font: inherit;
@@ -134,6 +137,7 @@ span::-webkit-scrollbar {
 }
 
 [type="checkbox"]:not(:checked) {
+    cursor: pointer;
     appearance: none;
     font: inherit;
     width: 2.4rem;
