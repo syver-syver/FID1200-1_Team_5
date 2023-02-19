@@ -60,7 +60,9 @@ function init() {
             input_field.value = '';
         };
     });
+    
     remove_button.addEventListener('click', remove_all_list_items);
+
     input_field.addEventListener('keyup', (event) => {
         if (event.key === 'Enter') {
             if (input_field.value == '') {
