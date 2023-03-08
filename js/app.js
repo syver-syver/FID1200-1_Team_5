@@ -3,7 +3,7 @@ function init() {
     const input_field = document.querySelector('input');
     const submit_button = document.getElementById('submit_button');
     const remove_button = document.getElementById('remove');
-    remove_button.style.backgroundImage = "url('/assets/Søppel_icon.svg')";
+    remove_button.style.backgroundImage = "url('./assets/søppel_icon.svg')";
     const ul_element = document.createElement('ul');
 
     // Local storage explanation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
@@ -83,11 +83,11 @@ function init() {
     function remove_button_hover() {
         if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
             remove_button.addEventListener('mouseover', () => {
-                remove_button.style.backgroundImage = "url('/assets/Søppel_icon_hover.svg')";
+                remove_button.style.backgroundImage = "url('./assets/søppel_icon_hover.svg')";
             });
 
             remove_button.addEventListener('mouseout', () => {
-                remove_button.style.backgroundImage = "url('/assets/Søppel_icon.svg')";
+                remove_button.style.backgroundImage = "url('./assets/søppel_icon.svg')";
             });
         }
         else {
