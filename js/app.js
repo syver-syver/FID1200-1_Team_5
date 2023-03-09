@@ -3,7 +3,6 @@ function init() {
     const input_field = document.querySelector('input');
     const submit_button = document.getElementById('submit_button');
     const remove_button = document.getElementById('remove');
-    remove_button.style.backgroundImage = "url('./assets/søppel_icon.svg')";
     const ul_element = document.createElement('ul');
 
     // Local storage explanation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
