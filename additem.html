@@ -17,17 +17,11 @@
         <button style="background-image: url(./assets/søppel_icon.svg);" id="remove"></button>
     </header>
     <main>
-        <!--
-            listen som følger må
-            bygges i javascript
-            ut i fra localstorage objekt
-            ta ut fra alle elemnter i objekt
-            kategori elementene tilhører til
-        -->
-        <ul>
-            <li><a href="/lists/?shopping">Shopping</a></li>
-            <li><a href="/lists/?holidays">Holidays</a></li>
-        </ul>
+        <div class="list_buttons">
+            <button id="submit_button"><img style="height: 30px;" src="./assets/pluss_icon.svg" alt=""></button>
+            <input type="text" placeholder="Legg til...">
+        </div>
+        <section class="shopping_list_items"></section>
     </main>
 </body>
 
