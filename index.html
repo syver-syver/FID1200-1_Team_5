@@ -2,27 +2,30 @@
 <html lang="no">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handleliste</title>
-    <script async src="js/app.js"></script>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preload" href="./assets/søppel_icon_hover.svg" as="image">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mine lister</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script async src="./js/index.js"></script>
+  <link rel="preload" href="./assets/søppel_icon_hover.svg" as="image">
+  <link rel="prefetch" href="./lists/index.html">
+  <link rel="prefetch" href="./js/list.js">
 </head>
 
 <body>
-    <header>
-        <h1>Handleliste</h1>
-        <button style="background-image: url(./assets/søppel_icon.svg);" id="remove"></button>
-    </header>
-    <main>
-        <div class="list_buttons">
-            <button id="submit_button"><img style="height: 30px;" src="./assets/pluss_icon.svg" alt=""></button>
-            <input type="text" placeholder="Legg til...">
-        </div>
-        <section class="shopping_list_items"></section>
-    </main>
+  <header>
+    <h1>Mine lister</h1>
+    <button style="background-image: url(./assets/søppel_icon.svg);" id="remove"></button>
+  </header>
+  <main>
+    <div class="list_buttons">
+      <button id="submit_button"><img src="../assets/pluss_icon.svg" alt=""></button>
+      <input type="text" placeholder="Ny liste...">
+    </div>
+    <section class="lists">
+    </section>
+  </main>
 </body>
 
 </html>
