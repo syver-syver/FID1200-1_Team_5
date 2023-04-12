@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>filtrert list</title>
-  
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Handleliste</title>
+	<script async src="../js/list.js"></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="preload" href="../assets/søppel_icon_hover.svg" as="image">
+	<link rel="preload" href="../assets/Checkmark_icon.svg" as="image">
 </head>
+
 <body>
-  <h1>Filtrert listen</h1>
-  her filtrerer elementer i localstorage
-  ut i fra dynamisk url "ord" som står etter ? i url
-  kategori: <h2></h2>
-  <script>
-    //code eksempel til å trekke ut kategori fra url 
-    const h2Element = document.querySelector('h2');
-    const urlString = window.location.search; // leser hele string tilhører til URL vi er
-    if(urlString) {
-        const category = (urlString.slice(1)); // slice med (1) som parameter fjern først bokstav, nemlig "?"
-        h2Element.textContent = category;
-        // du kan bruke nå category til å filtrere elementer fra 
-        // localstorage
-      }
-  </script>
+	<header>
+		<h1></h1>
+		<button style="background-image: url(../assets/søppel_icon.svg);" id="remove"></button>
+	</header>
+	<main>
+		<div class="list_buttons">
+			<button id="submit_button"><img style="height: 30px;" src="../assets/pluss_icon.svg" alt=""></button>
+			<input type="text" placeholder="Legg til...">
+		</div>
+		<section class="shopping_list_items">
+		</section>
+	</main>
 </body>
+
 </html>
