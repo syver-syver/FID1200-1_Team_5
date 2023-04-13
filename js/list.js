@@ -1,14 +1,12 @@
 function init() {
   // hente søke ord fra url
-  const searchQuery = window.location.search.slice(1);
+  const searchQuery = decodeURIComponent(window.location.search.slice(1));
 
   // endre side tittel og h1
   const h1Element = document.querySelector('h1');
-  const urlString = decodeURIComponent(window.location.search);
-  if (urlString) {
-    const category = (urlString.slice(1));
-    h1Element.textContent = category.charAt(0).toUpperCase() + category.slice(1);
-    document.title = category.charAt(0).toUpperCase() + category.slice(1) + ' liste';
+  if (searchQuery) {
+    h1Element.textContent = searchQuery;
+    document.title = `${searchQuery} liste`;
   }
 
   // hente DOM elementer
