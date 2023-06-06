@@ -110,7 +110,7 @@ button {
 
 span {
 	color: var(--100);
-	overflow: scroll;
+	overflow-wrap: break-word;
 }
 
 span::-webkit-scrollbar {
@@ -153,6 +153,61 @@ span::-webkit-scrollbar {
 	margin-right: 1.45rem;
 }
 
+.lists li {
+	position: relative;
+	display: flex;
+	width: 264px;
+	height: 264px;
+	justify-content: center;
+	padding: 30px;
+	border-radius: 0.5rem;
+	font-size: 39px;
+	background-color: var(--200);
+	overflow-wrap: break-word;
+}
+
+.lists li a {
+	color: var(--100);
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	padding: 1.05rem;
+	border-radius: 0.5rem;
+}
+
+.lists .li_delete_button{
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(+50%, -50%);
+	background-image: url(../assets/Søppel_icon_white.svg);
+	background-color: var(--100);
+	width: 2.4rem;
+	height: 2.4rem;
+	min-width: 2.4rem;
+	min-height: 2.4rem;
+}
+
+.lists ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 72px;
+	margin-top: 2.4rem;
+}
+
+.indicator_text {
+	font-size: 25px;
+	position: absolute;
+	bottom: 0;
+	padding: 1.05rem;
+	color: var(--100_checked);
+}
+
 @media screen and (max-width: 600px) {
 	header {
 		padding: 1rem;
@@ -173,6 +228,11 @@ span::-webkit-scrollbar {
 	[type="checkbox"]:not(:checked) {
 		margin-right: 0.4rem;
 	}
+
+	.lists li {
+		width: 264px;
+		height: 64px;
+	}	
 }
 
 @media screen and (max-width: 400px) {
@@ -184,28 +244,4 @@ span::-webkit-scrollbar {
 	section {
 		width: 100%;
 	}
-}
-
-
-.lists li {
-	position: relative;
-	border: 1px #000 solid;
-	display: flex;
-	width: 264px;
-	height: 264px;
-	justify-content: center;
-	padding: 30px;
-}
-
-.lists .li_delete_button{
-	position: absolute;
-	top: 0;
-	right: 0;
-	transform: translate(+50%, -50%);
-	background-image: url(../assets/Søppel_icon_white.svg);
-	background-color: var(--100);
-	width: 2.4rem;
-	height: 2.4rem;
-	min-width: 2.4rem;
-	min-height: 2.4rem;
 }

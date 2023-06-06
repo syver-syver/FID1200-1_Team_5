@@ -14,19 +14,35 @@ function init() {
 		const liAnchorElement = document.createElement('a');
 		const liDeleteButton = document.createElement('button');
 		liDeleteButton.className = 'li_delete_button';
-
-		liAnchorElement.innerText = item.value;
+	
+		// få liste fra local storage basert på navn
+		const shoppingList = JSON.parse(localStorage.getItem(`shopping_list_${item.value}`)) || [];
+	
+		// teller ting i listen
+		const totalItems = shoppingList.length;
+	
+		// teller hvor mange ting som er checked
+		const checkedItems = shoppingList.filter(item => item.checked).length;
+	
+		// lage indicatortext
+		const indicatorText = document.createElement('span');
+		indicatorText.textContent = `${checkedItems}/${totalItems}`;
+		indicatorText.className = 'indicator_text'
+	
+		liAnchorElement.innerText = `${item.value}`;
 		liAnchorElement.href = `/lists/?${item.value}`;
+
 		liElement.appendChild(liAnchorElement);
 		liElement.appendChild(liDeleteButton);
+		liElement.appendChild(indicatorText)
 		ulElement.appendChild(liElement);
-
+	
 		liDeleteButton.addEventListener('click', () => {
 			const index = shoppingListFromStorage.indexOf(item);
 			shoppingListFromStorage.splice(index, 1);
 			localStorage.setItem("shopping_list_index", JSON.stringify(shoppingListFromStorage));
 			ulElement.removeChild(liElement);
-
+	
 			const fileName = `shopping_list_${item.value}`;
 			Object.keys(localStorage).forEach(key => {
 				if (key.startsWith(fileName)) {
