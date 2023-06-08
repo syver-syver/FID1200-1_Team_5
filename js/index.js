@@ -30,7 +30,7 @@ function init() {
 		indicatorText.className = 'indicator_text'
 	
 		liAnchorElement.innerText = `${item.value}`;
-		liAnchorElement.href = `./lists/?${item.value}`;
+		liAnchorElement.href = `./lists/index.html?${item.value}`;
 
 		liElement.appendChild(liAnchorElement);
 		liElement.appendChild(liDeleteButton);
