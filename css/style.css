@@ -11,12 +11,12 @@ html {
 	font-size: 125%;
 	/*20px*/
 	font-family: 'Roboto', sans-serif;
+	min-height: 100vh;
 }
 
 body {
 	background-color: var(--300);
-	min-height: 100vh;
-
+	
 }
 
 header {
@@ -26,6 +26,24 @@ header {
 	padding: 2rem;
 	background-color: var(--200);
 	margin-bottom: 2.4rem;
+}
+
+footer {
+	background-color: var(--200);
+	color: var(--100);
+	width: 100%;
+	padding: 0.5rem;
+	position: absolute;
+	margin-top: 2.4rem;
+  }
+  
+.footerContent {
+	width: fit-content;
+	margin: auto;
+}
+
+footer a {
+	color: var(--100);
 }
 
 h1 {
